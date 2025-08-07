@@ -7,13 +7,13 @@ This repository contains a simple, responsive landing page for two productized s
 Once the site is deployed you will be able to view it at:
 
 ```
-<LIVE_URL_PLACEHOLDER>
+https://nanaofosu.github.io/lightning-prosite-landing/
 ```
 
 The source code for the site is available here:
 
 ```
-<REPO_URL_PLACEHOLDER>
+https://github.com/nanaofosu/lightning-prosite-landing
 ```
 
 ## Project Structure

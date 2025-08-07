@@ -1,0 +1,23 @@
+name: Lint HTML and CSS
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install linters
+        run: npm install -g htmlhint stylelint
+      - name: Lint HTML
+        run: htmlhint index.html
+      - name: Lint CSS
+        run: |
+          # create a minimal Stylelint config on the fly
+          echo "module.exports = { extends: ['stylelint-config-standard'] };" > .stylelintrc.js
+          npm install -g stylelint-config-standard
+          stylelint "**/*.css"
